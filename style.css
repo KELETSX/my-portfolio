@@ -1,39 +1,87 @@
 body {
-    font-family: Arial;
-    background-color: #f4f4f4;
-    text-align: center;
-    padding: 40px;
-    color: #333;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: #0d0d0d;
+  color: white;
+  padding: 40px 20px;
+  transition: 0.3s;
 }
 
-img {
-    border-radius: 50%;
-    border: 4px solid #3498db;
-    margin: 15px 0;
+body.light {
+  background: #f5f5f5;
+  color: #222;
 }
 
-h1 { color: #2c3e50; }
-h2 { color: #3498db; }
-body.dark {
-    background-color: #1a1a1a;
-    color: #f4f4f4;
+.container {
+  max-width: 700px;
+  margin: 0 auto;
 }
 
-body.dark h1, body.dark h2 {
-    color: #3498db;
+h1 { color: #3399ff; }
+h2 { color: #3399ff; margin-top: 40px; }
+
+.subtitle {
+  color: #aaa;
+  font-size: 16px;
+  margin-bottom: 20px;
 }
 
-button {
-    padding: 10px 20px;
-    border: none;
-    background: #3498db;
-    color: white;
-    border-radius: 8px;
-    cursor: pointer;
-    margin: 10px;
-    font-size: 16px;
+.profile-pic {
+  width: 180px;
+  height: 240px;
+  border-radius: 50%;
+  border: 4px solid #3399ff;
+  object-fit: cover;
+  margin: 20px 0;
 }
 
+button, .btn {
+  background: #3399ff;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  text-decoration: none;
+  display: inline-block;
+  margin: 10px;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin: 20px 0;
+}
+.skills span {
+  background: #0044cc;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+.project-card {
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 12px;
+  margin: 20px 0;
+  border: 1px solid #333;
+  text-align: left;
+}
+.project-card a {
+  color: #3399ff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer {
+  margin-top: 40px;
+  color: #777;
+  font-size: 14px;
+}
 button:hover {
     background: #2c3e50;
 }
