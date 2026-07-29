@@ -20,7 +20,7 @@ function addService() {
 
 function loadServices() {
   let services = JSON.parse(localStorage.getItem('bmwServices')) || [];
-  const list = document.querySelector('.project-card ul');
+  const list = document.getElementById('serviceList');
   
   if (services.length === 0) {
     list.innerHTML = '<li>⏳ No services logged yet. Click button to add one!</li>';
@@ -29,6 +29,6 @@ function loadServices() {
 
   list.innerHTML = ''; // clear list
   services.reverse().forEach(s => {
-    list.innerHTML += <li style="margin: 10px 0;">✅ <b>${s.date}:</b> ${s.work} <br><small>${s.notes}</small></li>;
+    list.innerHTML += <li style="margin: 10px 0;">✅ <b>${s.date}:</b> ${s.work} <br><small style="color:#888;">${s.notes}</small></li>;
   });
 }
