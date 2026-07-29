@@ -1,4 +1,3 @@
-alert("JS is working!");
 function addService() {
   const date = prompt("Enter service date: e.g. 29 July 2026");
   const work = prompt("What work was done? e.g. Oil Change");
