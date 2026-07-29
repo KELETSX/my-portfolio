@@ -1,64 +1,39 @@
-<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BMW E90 Service Tracker</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    .container { max-width: 700px; margin: 40px auto; padding: 20px; text-align: center; }
+    #serviceList { list-style: none; padding: 0; text-align: left; }
+    #serviceList li { background: #f1f1f1; padding: 12px; border-radius: 8px; margin-bottom: 10px; }
+    body.dark #serviceList li { background: #2a2a2a; }
+    .project-card { background: #fff; padding: 20px; border-radius: 12px; margin: 20px 0; }
+    body.dark .project-card { background: #1e1e1e; }
+  </style>
 </head>
 <body>
   <div class="container">
     <a href="index.html" class="btn" style="background:#555;">← Back to Portfolio</a>
     
-    <h1>BMW E90 320i Service Log</h1>
+    <h1>🚗 BMW E90 320i Service Log</h1>
     <p class="subtitle">Keep track of maintenance and repairs</p>
 
     <div class="project-card">
       <h2>Recent Work</h2>
-    <ul id="serviceList" style="text-align: left; list-style: none; padding: 0;">
-  <!-- JavaScript will fill this automatically -->
-</ul>
+      <ul id="serviceList">
+        <!-- JavaScript will fill this automatically -->
+      </ul>
     </div>
 
     <h2>Add New Service</h2>
-    <button id="addServiceBtn">Log New Service</button>
+    <button id="addServiceBtn">➕ Log New Service</button>
 
   </div>
-<script>
-// v2
-alert("JS v2 is working!");
 
-function addService() {
-    const date = prompt("Enter service date: e.g. 29 July 2026");
-    const work = prompt("What work was done? e.g. Oil Change");
-    const notes = prompt("Any notes? e.g. Used Castrol 5W-30");
-
-    if (!date || !work) return;
-
-    let services = JSON.parse(localStorage.getItem("bmwServices")) || [];
-    services.unshift({ date, work, notes });
-    localStorage.setItem("bmwServices", JSON.stringify(services));
-    displayServices();
-}
-
-function displayServices() {
-    const list = document.getElementById("serviceList");
-    let services = JSON.parse(localStorage.getItem("bmwServices")) || [];
-    
-    if (services.length === 0) {
-        list.innerHTML = "<li>No service history yet. Click 'Log New Service' to start!</li>";
-        return;
-    }
-    
-    list.innerHTML = "";
-    services.forEach(s => {
-        list.innerHTML += <li style="margin: 10px 0;"> <b>${s.date}:</b> ${s.work} <br><small>${s.notes}</small></li>;
-    });
-}
-
-document.getElementById("addServiceBtn").addEventListener("click", addService);
-displayServices();
-</script>
+<script src="script.js"></script>
 </body>
 </html>
