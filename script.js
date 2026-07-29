@@ -1,3 +1,4 @@
+alert("Script loaded!");
 // Load saved services when page loads
 document.addEventListener('DOMContentLoaded', loadServices);
 
