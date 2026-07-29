@@ -1,24 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>BMW E90 Service Tracker</title>
-    <link rel="stylesheet" href="style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BMW E90 Service Tracker</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <a href="index.html">← Back to Portfolio</a>
+  <div class="container">
+    <a href="index.html" class="btn" style="background:#555;">← Back to Portfolio</a>
     
     <h1>BMW E90 320i Service Log</h1>
-    
-    <h2>Recent Work</h2>
-    <ul>
-        <li><b>29 July 2026:</b> Throttle Body Cleaned - Fixed idling issue</li>
-        <li><b>Coming Soon:</b> Oil Change + Spark Plugs</li>
-    </ul>
-    
+    <p class="subtitle">Keep track of maintenance and repairs</p>
+
+    <div class="project-card">
+      <h2>Recent Work</h2>
+      <ul style="text-align: left; list-style: none; padding: 0;">
+        <li style="margin: 10px 0;">✅ <b>29 July 2026:</b> Throttle Body Cleaned - Fixed Idling Issue</li>
+        <li style="margin: 10px 0;">⏳ <b>Coming Soon:</b> Oil Change + Spark Plugs</li>
+      </ul>
+    </div>
+
     <h2>Add New Service</h2>
     <button id="addServiceBtn">Log New Service</button>
-    
-    <script src="script.js"></script>
+
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
