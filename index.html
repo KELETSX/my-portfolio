@@ -1,36 +1,44 @@
 <!DOCTYPE html>
-<html>
-<head><meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>My Portfolio - Keletso Lebeya</title>
-    <link rel="stylesheet" href="style.css">
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Keletso Lebeya - Web Developer</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="container">
     <h1>Hello, I'm Keletso</h1>
-    <img src="me.jpg" alt="Keletso" width="150">
-    <button id="themeBtn">🌙 Dark Mode</button>
-
-<h2>Contact Me</h2>
-<button id="contactBtn">Send Message</button>
-    <p>I'm learning to become a Web Developer in Polokwane</p>
+    <p class="subtitle">Aspiring Web Developer | Based in Polokwane</p>
     
-    <h2>Skills</h2>
-    <h2>Projects</h2>
-    <li><b><a href="tracker.html">BMW E90 Service Tracker</a></b> - HTML, CSS, JavaScript</li>
-<ul>
-    <li><b>Personal Portfolio</b> - HTML, CSS</li>
-</ul>
-    <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-    </ul>
+    <img src="me.jpg" alt="Keletso" class="profile-pic">
+    
+    <button id="toggle-mode">🌙 Dark Mode</button>
 
-    <h2>Contact</h2>
-    <a href="mailto:Nasdaqkeletso@gmail.com">
-    <button>📧 Email Me</button>
-</a>
-    <p>Whatsapp: 0799401047</p>
-    <script src="script.js"></script>
+    <h2>About Me</h2>
+    <p>I'm passionate about building websites that solve real problems. Currently learning HTML, CSS, and JavaScript while building projects. Based in Polokwane and open to opportunities.</p>
+
+    <h2>Skills</h2>
+    <div class="skills">
+      <span>HTML</span>
+      <span>CSS</span>
+      <span>JavaScript</span>
+      <span>GitHub</span>
+      <span>Responsive Design</span>
+    </div>
+
+    <h2>Projects</h2>
+    <div class="project-card">
+      <h3>🚗 BMW Service Tracker</h3>
+      <p>Track service dates and mileage for BMW vehicles. Built with vanilla JavaScript and local storage.</p>
+      <a href="tracker.html">View Project →</a>
+    </div>
+
+    <h2>Contact Me</h2>
+    <a href="Nasdaqkeletso@gmail.com" class="btn">📧 Send Message</a>
+    
+    <p class="footer">I'm learning to become a Web Developer in Polokwane</p>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
