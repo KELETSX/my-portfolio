@@ -22,13 +22,22 @@ function loadServices() {
     return;
   }
 
-  list.innerHTML = '';
-  services.reverse().forEach(s => {
-    list.innerHTML += <li style="margin: 10px 0;"> <b>${s.date}:</b> ${s.work} <br><small style="color:#888;">${s.notes}</small></li>;
+  // Use a copy before reversing to avoid mutating the stored array
+  const reversed = services.slice().reverse();
+
+  // Build HTML then set once (better than repeatedly concatenating)
+  let html = '';
+  reversed.forEach(s => {
+    html += `<li style="margin: 10px 0;">
+               <b>${s.date}:</b> ${s.work} <br>
+               <small style="color:#888;">${s.notes || ''}</small>
+             </li>`;
   });
+  list.innerHTML = html;
 }
 
 document.addEventListener('DOMContentLoaded', function() {
   loadServices();
-  document.getElementById('addServiceBtn').addEventListener('click', addService);
+  const btn = document.getElementById('addServiceBtn');
+  if (btn) btn.addEventListener('click', addService);
 });
