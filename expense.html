@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Expense Tracker | Keletso</title>
+<style>
+  body { font-family: Arial; background: #121212; color: #eee; padding: 20px; max-width: 600px; margin: auto; }
+  h1 { color: #00ff88; text-align: center; }
+  .total-box { background: #1f1f1f; padding: 20px; border-radius: 10px; text-align: center; margin-bottom: 20px; border: 2px solid #00ff88; }
+  .total-box h2 { margin: 0; font-size: 2.5rem; color: #00ff88; }
+  form { background: #1f1f1f; padding: 20px; border-radius: 10px; margin-bottom: 20px; }
+  input, select, button { width: 100%; padding: 10px; margin: 8px 0; border-radius: 5px; border: none; box-sizing: border-box; }
+  button { background: #00ff88; color: #000; font-weight: bold; cursor: pointer; }
+  button:hover { background: #00cc6a; }
+  ul { list-style: none; padding: 0; }
+  li { background: #1f1f1f; padding: 15px; margin: 10px 0; border-radius: 8px; display: flex; justify-content: space-between; }
+  .amount { color: #ff4d4d; font-weight: bold; }
+</style>
+</head>
+<body>
+
+<h1>💰 Expense Tracker</h1>
+
+<div class="total-box">
+  <p>Total Spent</p>
+  <h2 id="totalAmount">R0.00</h2>
+</div>
+
+<form id="expenseForm">
+  <input type="number" id="amount" placeholder="Amount e.g. 250" required>
+  <select id="category" required>
+    <option value="">Select Category</option>
+    <option>Food</option>
+    <option>Transport</option>
+    <option>BMW Parts</option>
+    <option>Airtime/Data</option>
+    <option>Other</option>
+  </select>
+  <input type="text" id="note" placeholder="Note e.g. Chicken & Chips">
+  <button type="submit">➕ Add Expense</button>
+</form>
+
+<h3>Recent Expenses</h3>
+<ul id="expenseList"></ul>
+
+<a href="index.html">← Back to Portfolio</a>
+
+<script src="expense.js"></script>
+</body>
+</html>
