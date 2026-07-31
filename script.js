@@ -24,7 +24,6 @@ function loadServices() {
 
   // Use a copy before reversing to avoid mutating the stored array
   const reversed = services.slice().reverse();
-
   // Build HTML then set once (better than repeatedly concatenating)
   let html = '';
   reversed.forEach(s => {
