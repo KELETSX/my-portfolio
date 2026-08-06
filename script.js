@@ -1,4 +1,12 @@
-function addService() {
+function updateStats() {
+  const totalSpent = services.reduce((sum, service) => sum + Number(service.cost), 0);
+  const totalServices = services.length;
+  const lastService = services.length > 0 ? services[services.length - 1].date : '-';
+
+  document.getElementById('totalSpent').innerText = R${totalSpent};
+  document.getElementById('totalServices').innerText = totalServices;
+  document.getElementById('lastService').innerText = lastService;
+}
   const date = prompt("Enter service date: e.g. 29 July 2026");
   const work = prompt("What work was done? e.g. Oil Change");
   const notes = prompt("Any notes? e.g. Used Castrol 5W-30");
