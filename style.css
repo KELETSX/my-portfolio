@@ -132,3 +132,15 @@ body.light .skills span { background: #3399ff; }
   color: #00ff88;
   margin: 5px 0 0 0;
 }
+.project-card {
+  background: #1e1e1e;
+  border: 2px solid #00ff88;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  transition: 0.3s;
+}
+.project-card:hover {
+  box-shadow: 0 0 15px #00ff88;
+  transform: translateY(-5px);
+}
